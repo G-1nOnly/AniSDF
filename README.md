@@ -14,7 +14,7 @@ Official implementation of "AniSDF: Fused-Granularity Neural Surfaces with Aniso
 
 ## Requirements and Environments
 ### Note
-- To utilize multiresolution hash encoding or fully fused networks provided by tiny-cuda-nn, you should have least an RTX 2080Ti, see [https://github.com/NVlabs/tiny-cuda-nn#requirements](https://github.com/NVlabs/tiny-cuda-nn#requirements) for more details.
+- To utilize multiresolution hash encoding or fully fused networks provided by tiny-cuda-nn, you should have at least an RTX 2080Ti, see [https://github.com/NVlabs/tiny-cuda-nn#requirements](https://github.com/NVlabs/tiny-cuda-nn#requirements) for more details.
 - To obtain the best results, an Tesla V100 is highly recommended, though most scenes can be recontructed using an RTX 3090.
 - Multi-GPU training is currently not supported on Windows.
 
@@ -50,7 +50,7 @@ Existing data following this file structure also works as long as images are sto
 - There are three choices to determine the scene center: `dataset.center_est_method=camera` uses the center of all camera positions as the scene center; `dataset.center_est_method=lookat` assumes the cameras are looking at the same point and calculates an approximate look-at point as the scene center; `dataset.center_est_method=point` uses the center of all points (reconstructed by COLMAP) that are bounded by cameras as the scene center. Please choose an appropriate method according to your capture.
 
 ### Experiments Note
-- Some thoughts on experiments would be update here.
+- Some thoughts on experiments would be updated here.
 
 ### Testing
 The training procedure are by default followed by testing, which computes metrics on test data, generates animations and exports the geometry as triangular meshes. If you want to do testing alone, just resume the pretrained model and replace `--train` with `--test`, for example:
