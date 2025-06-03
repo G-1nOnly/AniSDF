@@ -1,4 +1,4 @@
-name: neus-dtu-ASG-SG-ada-fus-${dataset.scene}
+name: anisdf-dtu-${dataset.scene}
 tag: ""
 seed: 42
 
